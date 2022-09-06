@@ -74,11 +74,21 @@ WSGI_APPLICATION = 'dash_c.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': 'dash_c',
+       'USER': 'dashboard',
+       'PASSWORD': 'dashboard',
+       'HOST': 'database-2.cwfh0j3bsfsz.us-east-1.rds.amazonaws.com',
+       'PORT': 5432,
+   }
 }
 
 
