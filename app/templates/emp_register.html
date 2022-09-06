@@ -1,0 +1,39 @@
+<form action="{% url 'ssregister' %}" method='post'>
+    {% csrf_token %}
+    <table>
+        <tr>
+            <th><input type="text" placeholder='emp_name' name='t1'></th>
+        </tr>
+        <tr>
+            <th><input type="password" placeholder='emp_password' name='t9'></th>
+        </tr>
+        <tr>
+            <th><input type="text" placeholder='emp_username' name='t10'></th>
+        </tr>
+        <tr>
+            <th><input type="number" placeholder='emp_id' name='t2'></th>
+        </tr>
+        <tr>
+            <th><input type="date" placeholder='emp_dob' name='t3'></th>
+        </tr>
+        <tr>
+            <th><input type="number" placeholder='emp_contact' name='t4'></th>
+        </tr>
+        <tr>
+            <th><input type="email" placeholder='emp_email' name='t5'></th>
+        </tr>
+
+        <tr>
+            <th><input type="text" placeholder='emp_designation' name='t6'></th>
+        </tr>
+        <tr>
+            <th><input type="date" placeholder='emp_doj' name='t7'></th>
+        </tr>
+        <tr>
+            <th><input type="file" id="t8" name="img" accept="image/*"></th>
+        </tr>
+        <tr>
+            <th><button type="submit" class="btn btn-outline-warning">Register</button></th>
+        </tr>
+    </table>
+</form>

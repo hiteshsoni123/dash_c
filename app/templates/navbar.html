@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+    <div class="container mt-5">
+        <nav class="navbar bg-light">
+            <div class="container">
+              <a class="navbar-brand" href="evdtechnology.com">
+                {% comment %} <img src="{% static 'images/evd.jpg' %}" alt="" width="70" height="24" class="d-inline-block align-text-top"> {% endcomment %}
+                EVD Technology
+              </a>
+            </div>
+          </nav>
+          {% block content %} 
+             
+            {% include 'side_bar.html' %}
+          {% endblock content %}
+    </div>
+
+    {% comment %} {% block content %} 
+        
+        {% endblock content %} {% endcomment %}
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

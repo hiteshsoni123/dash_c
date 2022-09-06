@@ -1,0 +1,42 @@
+{% load static %}
+
+{% include 'navbar.html' %}
+
+{% block content %} 
+
+{% load static %}
+             
+            <div class="displayFixed" style="position: absolute; left:25%; top:15%; right: 8%; text-align:justify;">
+                <P>Holiday List</P>
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Sr. No.</th>
+                        <th scope="col">Day</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Occassion</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for x in data %}
+                          <tr>
+                            <th>{{ x.id }}</th>
+                            <td>{{ x.day }}</td>
+                            <td>{{ x.date }}</td>
+                            <td>{{ x.occassion }}</td>
+                            {% if x.eligiblity %}
+                                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                    <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                                  </svg></td>
+                            {% else %}  
+                            <td>-</td>  
+                            {% endif %}
+                          </tr>
+                           {% endfor %}
+                    </tbody>
+                  </table>
+
+                  total = {{ count }} 
+            </div>
+
+{% endblock content %}
