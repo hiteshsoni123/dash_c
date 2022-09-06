@@ -83,8 +83,8 @@ WSGI_APPLICATION = 'dash_c.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'dash_c',
-       'USER': 'dashboard',
+       'NAME': 'dashboard',
+       'USER': 'postgresss',
        'PASSWORD': 'dashboard',
        'HOST': 'database-2.cwfh0j3bsfsz.us-east-1.rds.amazonaws.com',
        'PORT': 5432,
